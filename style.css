@@ -6,7 +6,7 @@
  
 html{
     scroll-behavior: smooth;
-    scroll-padding-top: 12vh;
+    scroll-padding-top: 10vh;
 }
 
 a, button {
@@ -69,80 +69,6 @@ a:hover {
 #btn-mobile {
   display: none;
 } 
-
-
-/*-------------- RESPONSIVO ---------------*/
-
-@media (max-width: 740px) {
-    #menu {
-      display: block;
-      position: absolute;
-      width: 100%;
-      top: 63px;
-      right: 0px;
-      background-color: #2c3e50;
-      max-height: 25vh;
-      transition: 0.6s;
-      z-index: 1000;
-      height: 0px;
-      visibility: hidden;
-      overflow-y: hidden;
-    }
-    #nav.active #menu {
-      height: calc(100vh - 70px);
-      visibility: visible;
-      overflow-y: auto;
-    }    
-    #menu a {
-      padding: 15px;
-      margin: 0 1rem;      
-    }
-    #btn-mobile {
-      display: flex;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      border: none;
-      background: none;
-      cursor: pointer;
-      gap: 0.5rem;
-    }
-    #hamburger {
-      border-top: 2px solid;
-      width: 20px;
-    }
-    #hamburger::after,
-    #hamburger::before {
-      content: '';
-      display: block;
-      width: 20px;
-      height: 2px;
-      background: currentColor;
-      margin-top: 5px;
-      transition: 0.3s;
-      position: relative;
-    }
-    #nav.active #hamburger {
-      border-top-color: transparent;
-    }
-    #nav.active #hamburger::before {
-      transform: rotate(135deg);
-    }
-    #nav.active #hamburger::after {
-      transform: rotate(-135deg);
-      top: -7px;
-    }
-    .perfil img:first-child{
-        height: 300px;
-        width: 300px;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-
-    #demo{
-        display: flex;
-        flex-direction: column;
-    }
-}
   
 /*----------------- PERFIL --------------*/
 
@@ -182,7 +108,7 @@ a:hover {
 }
 
 .perfil .SociaisMedia img{
-    padding: 5px;
+    padding: 7px;
     height: 35px;
     width: 35px;
     -moz-transition: all 0.3s;
@@ -191,9 +117,9 @@ a:hover {
 }
 
 .perfil .SociaisMedia img:hover{
-    -moz-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
 }
 
 /*-------------------- PROJETOS ----------------------*/
@@ -300,13 +226,224 @@ a:hover {
     opacity: 1;
 }
 
+/*-------------------- SOBRE MIM ----------------------*/
 
 #sobre{
     padding: 4rem 2rem;
-    height: 40vh;
+    height: 30vh;
     background-color: #18bc9c;
+    margin-top: 55px;
 }
 
-#sobre h1{
+#sobre h1, #sobre p{
     color: #fff;
+}
+
+#sobre p{
+    margin-top: 25px;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/*-------------------- HABILIDADES ----------------------*/
+
+#habilidades{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+#habilidades .skills{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+#habilidades .skills .Hcontainer{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    background-image: none;    
+    border: 1px solid;
+    border-color:#18bc9c ;
+    border-radius: 15px;
+    padding: 20px;
+    width: 30%;
+}
+
+#habilidades .skills .Hcontainer h2{
+    color:#18bc9c;
+    font-size: 1.5rem;
+}
+    
+
+#habilidades .skills .Hcontainer li{
+    font-size: 1.2rem;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+/*-------------------- CONTATO ----------------------*/
+
+#contato{
+    background-color:#18bc9c ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contato h1{
+    color: #fff;
+    margin: 55px 0 30px 0;
+}
+
+#contato a{
+    color: blue;
+    opacity: 0.9;
+    font-size: 1.8rem;
+    margin-bottom: 35px;
+    transition: all .3s ease-in-out;
+}
+
+#contato a:hover{
+    color: rgb(57, 57, 175);
+    letter-spacing: 0.8px;
+}
+
+/*-------------------- FOOTER ----------------------*/
+
+footer{
+    height: 15vh;
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.copyright p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright img{
+    margin-left: 5px;
+    height: 20px;
+    width: 20px;
+}
+
+/*-------------- RESPONSIVO ---------------*/
+
+@media (max-width: 740px) {
+    #menu {
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 63px;
+      right: 0px;
+      background-color: #2c3e50;
+      max-height: 25vh;
+      transition: 0.6s;
+      z-index: 1000;
+      height: 0px;
+      visibility: hidden;
+      overflow-y: hidden;
+    }
+    #nav.active #menu {
+      height: calc(100vh - 70px);
+      visibility: visible;
+      overflow-y: auto;
+    }    
+    #menu a {
+      padding: 15px;
+      margin: 0 1rem;      
+    }
+    #btn-mobile {
+      display: flex;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      gap: 0.5rem;
+    }
+    #hamburger {
+      border-top: 2px solid;
+      width: 20px;
+    }
+    #hamburger::after,
+    #hamburger::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: currentColor;
+      margin-top: 5px;
+      transition: 0.3s;
+      position: relative;
+    }
+    #nav.active #hamburger {
+      border-top-color: transparent;
+    }
+    #nav.active #hamburger::before {
+      transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+    .perfil img:first-child{
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .perfil .SociaisMedia{
+        margin-bottom: 18px;
+    }
+
+    .perfil .SociaisMedia img{
+        padding: 7px;
+        height: 35px;
+        width: 35px;
+    }
+    #demo{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #sobre{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 45vh;
+        padding: 3rem 1rem;
+    }
+
+    #sobre p{
+        font-size: 1.3rem;
+        line-height: 1.6;
+        letter-spacing: 2;
+    }
+
+    #habilidades .skills{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #habilidades .skills .Hcontainer{
+        width: 65%;
+        margin-bottom: 25px;
+    }
+
+    #contato a{
+        font-size: 1.4rem;
+    }
 }
