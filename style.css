@@ -321,6 +321,10 @@ header a{
     padding: 4rem 2rem;
 }
 
+#contato h1{    
+    text-align: center;
+}
+
 #contato a{
     color: blue;
     opacity: 0.9;
@@ -477,5 +481,5 @@ footer{
 
     #contato a{
         font-size: 1.4rem;
-    }
+    }    
 }
