@@ -10,13 +10,32 @@ html{
 }
 
 a, button {
-    color: #fff;
     text-decoration: none;
     transition: 0.3s;
 }
   
 a:hover {    
     opacity: 0.7;
+}
+
+/*------------- Background colos -------------*/
+
+#perfil, #sobre, #contato{           
+    background-color: #18bc9c;
+}
+
+/*----------------- Titulos ------------------*/
+
+h1.titulo{                            
+    text-decoration: underline;
+}
+
+h1.azul{
+    color: #18bc9c;
+}
+
+h1.branco, button{
+    color: #fff;
 }
 
 /*----------------- BARRA NAVEGAÇÃO -------------------------*/
@@ -26,7 +45,7 @@ a:hover {
   font-weight: bold;
 }
 
-#header {
+header {
   box-sizing: border-box;
   height: 10vh;
   padding: 1rem;
@@ -36,15 +55,15 @@ a:hover {
   background-color: #2c3e50;
   width: 100%;
   position: fixed;
-  
 }
 
-#header a{
+header a{
     letter-spacing: 2px;
     margin: 10px;
+    color: #fff;
 }
 
-#menu {
+#menu{
   display: flex;
   list-style: none;
   gap: 0.5rem;
@@ -72,13 +91,12 @@ a:hover {
   
 /*----------------- PERFIL --------------*/
 
-.perfil{
+#perfil{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #18bc9c;
     color: #fff;
 }
 
@@ -90,14 +108,13 @@ a:hover {
     object-fit: cover;    
 }
 
-.perfil h1{
-    padding: 5px;
-    font-size: 3em;
-    text-align: center;
+#perfil h1{    
+    font-size: 3em;    
     letter-spacing: 5px;
+    text-align: center;
 }
 
-.perfil p{
+#perfil p{
     font-size: 1.3rem;
 }
 
@@ -107,7 +124,7 @@ a:hover {
     padding: 15px;
 }
 
-.perfil .SociaisMedia img{
+#perfil .SociaisMedia img{
     padding: 7px;
     height: 35px;
     width: 35px;
@@ -116,7 +133,7 @@ a:hover {
     transition: all 0.3s;
 }
 
-.perfil .SociaisMedia img:hover{
+#perfil .SociaisMedia img:hover{
     -moz-transform: scale(1.5);
     -webkit-transform: scale(1.5);
     transform: scale(1.5);
@@ -124,22 +141,32 @@ a:hover {
 
 /*-------------------- PROJETOS ----------------------*/
 
-#projetos{
-    margin-top: 55px;
+#projetos{    
     display: flex;
     flex-direction: column;
-}
-
-#projetos h1{
-    text-align: center;
-    color: #18bc9c;
-    text-decoration: underline;
-    font-size: 2rem;
+    align-items: center;
+    padding: 1rem 2rem;
 }
 
 #demo{
     display: flex;
     overflow: auto;
+    width: 90%;
+}
+
+#demo::-webkit-scrollbar{
+    border-radius: 15px;    
+    height: 12px;
+}
+
+#demo::-webkit-scrollbar-thumb{
+    background-color:#0a0b24;
+    border-radius: 15px;
+}
+
+#demo::-webkit-scrollbar-track{
+    background-color: #1f215ec0;
+    border-radius: 15px;
 }
 
 .container{
@@ -150,7 +177,7 @@ a:hover {
     min-width: 30%;
     border: 3px solid rgba(109, 103, 103, 0.589);
     border-radius: 15px;   
-    justify-content: space-around;
+    justify-content: space-around;    
 }
 
 .container p{
@@ -229,21 +256,19 @@ a:hover {
 /*-------------------- SOBRE MIM ----------------------*/
 
 #sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 4rem 2rem;
-    height: 30vh;
-    background-color: #18bc9c;
-    margin-top: 55px;
-}
-
-#sobre h1, #sobre p{
-    color: #fff;
+    height: 30vh;        
 }
 
 #sobre p{
     margin-top: 25px;
     font-size: 1.4rem;
     line-height: 1.6;
-    text-align: center;
+    text-align: center;   
+    color: #fff;
 }
 
 /*-------------------- HABILIDADES ----------------------*/
@@ -252,8 +277,8 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin: 50px 0;
+    align-items: center;    
+    padding: 3rem 2rem;    
 }
 
 #habilidades .skills{
@@ -279,33 +304,28 @@ a:hover {
     font-size: 1.5rem;
 }
     
-
 #habilidades .skills .Hcontainer li{
     font-size: 1.2rem;
     margin-left: 30px;
-    margin-top: 10px;
+    margin-top: 13px;
+    font-weight: bold;
 }
 
 /*-------------------- CONTATO ----------------------*/
 
-#contato{
-    background-color:#18bc9c ;
+#contato{    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-#contato h1{
-    color: #fff;
-    margin: 55px 0 30px 0;
+    padding: 4rem 2rem;
 }
 
 #contato a{
     color: blue;
     opacity: 0.9;
     font-size: 1.8rem;
-    margin-bottom: 35px;
+    margin-top: 25px;
     transition: all .3s ease-in-out;
 }
 
@@ -397,29 +417,41 @@ footer{
       transform: rotate(-135deg);
       top: -7px;
     }
-    .perfil img:first-child{
+    #perfil img:first-child{
         height: 300px;
         width: 300px;
         border-radius: 50%;
         object-fit: cover;
     }
 
-    .perfil .SociaisMedia{
+    #perfil .SociaisMedia{
         margin-bottom: 18px;
     }
 
-    .perfil .SociaisMedia img{
+    #perfil .SociaisMedia img{
         padding: 7px;
         height: 35px;
         width: 35px;
     }
-    #demo{
-        display: flex;
-        flex-direction: column;
+
+    #projetos{
+        padding: 20px 0;        
     }
 
-    #sobre{
-        display: flex;
+    #demo{ 
+        align-items: center;
+        justify-content: center;       
+        flex-direction: column;
+        width: 80%;
+        padding: 15px;
+        overflow: unset;
+    }
+
+    #projetos .container{
+        width: 95%;       
+    }
+
+    #sobre{        
         flex-direction: column;
         align-items: center;
         justify-content: center;
